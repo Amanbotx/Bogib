@@ -377,9 +377,10 @@ async def start(client, message):
             )
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
-            await message.reply_text(
-                text=f"<b>Hey {message.from_user.mention}, You are successfully verified !\nNow you have unlimited access for all movies till today midnight.</b>",
-                protect_content=True
+            await message.reply_photo(
+                photo = VRFIED_IMG,
+                caption = script.VERIFED_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                # protect_content=True
             )
             await verify_user(client, userid, token)
         else:
@@ -455,11 +456,12 @@ async def start(client, message):
                     ],[
                         InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
                     ]]
-                    await message.reply_text(
-                        text="<b>You are not verified !\nKindly verify to continue !</b>",
-                        protect_content=True,
-                        reply_markup=InlineKeyboardMarkup(btn)
-                    )
+                    await message.reply_photo(
+                    photo = VRFY_IMG,
+                    caption=script.VERIFY_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                    # protect_content=True,
+                    reply_markup=InlineKeyboardMarkup(btn)
+        )
                     return
             if STREAM_MODE == True:
                 button = [[
@@ -528,11 +530,12 @@ async def start(client, message):
                     ],[
                         InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
                     ]]
-                    await message.reply_text(
-                        text="<b>You are not verified !\nKindly verify to continue !</b>",
-                        protect_content=True,
-                        reply_markup=InlineKeyboardMarkup(btn)
-                    )
+                    await message.reply_photo(
+                    photo = VRFY_IMG,
+                    caption=script.VERIFY_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                    # protect_content=True,
+                    reply_markup=InlineKeyboardMarkup(btn)
+    )
                     return
             if STREAM_MODE == True:
                 button = [[
@@ -600,11 +603,12 @@ async def start(client, message):
             ],[
                 InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
             ]]
-            await message.reply_text(
-                text="<b>You are not verified !\nKindly verify to continue !</b>",
-                protect_content=True,
-                reply_markup=InlineKeyboardMarkup(btn)
-            )
+            await message.reply_photo(
+                    photo = VRFY_IMG,
+                    caption=script.VERIFY_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                    # protect_content=True,
+                    reply_markup=InlineKeyboardMarkup(btn)
+                                                )
             return
     if STREAM_MODE == True:
         button = [[
