@@ -92,8 +92,8 @@ NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 # Shortlink Info
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'gplinks.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'b53e4769ab3cc30124a32cb9c27496c7ddaddecc')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'OMNIFLY.IN.NET')
+SHORTLINK_API = environ.get('SHORTLINK_API', '4c9881256b470862023ac67db546b25175fb4b20')
 
 # Others
 MAX_B_TN = environ.get("MAX_B_TN", "5")
