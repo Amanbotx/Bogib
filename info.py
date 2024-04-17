@@ -126,7 +126,7 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "https://mytestvj-998c9929dc7a.herokuapp.com/")
+URL = environ.get("URL", "https://cderreeert.onrender.com/")
 
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
