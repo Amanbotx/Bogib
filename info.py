@@ -95,6 +95,10 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'OMNIFLY.IN.NET')
 SHORTLINK_API = environ.get('SHORTLINK_API', '4c9881256b470862023ac67db546b25175fb4b20')
 
+# add premium logs channel id
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002062708890'))
+
+
 # Others
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 PORT = environ.get("PORT", "8080")
