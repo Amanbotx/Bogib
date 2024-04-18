@@ -367,25 +367,45 @@ async def start(client, message):
             await asyncio.sleep(1) 
         return await sts.delete()
 
+    
+
     elif data.split("-", 1)[0] == "verify":
         userid = data.split("-", 2)[1]
         token = data.split("-", 3)[2]
+        fileid = data.split("-", 3)[3]
         if str(message.from_user.id) != str(userid):
             return await message.reply_text(
-                text="<b>Invalid link or Expired link !</b>",
+                text="<b>Iɴᴠᴀʟɪᴅ ʟɪɴᴋ ᴏʀ Exᴘɪʀᴇᴅ ʟɪɴᴋ !</b>",
                 protect_content=True
             )
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
+            if fileid == "send_all":
+                btn = [[
+                    InlineKeyboardButton("Gᴇᴛ Fɪʟᴇ", callback_data=f"checksub#send_all")
+                ]]
+                await verify_user(client, userid, token)
+                await message.reply_photo(
+                    photo = VRFIED_IMG,
+                    caption = script.VERIFED_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                    protect_content=True,
+                    reply_markup=InlineKeyboardMarkup(btn)
+                )
+                return
+            btn = [[
+                InlineKeyboardButton("Get File", url=f"https://telegram.me/{temp.U_NAME}?start=files_{fileid}")
+            ]]
             await message.reply_photo(
                 photo = VRFIED_IMG,
                 caption = script.VERIFED_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-                # protect_content=True
+                protect_content=True,
+                reply_markup=InlineKeyboardMarkup(btn)
             )
             await verify_user(client, userid, token)
+            return
         else:
             return await message.reply_text(
-                text="<b>Invalid link or Expired link !</b>",
+                text="<b>Iɴᴠᴀʟɪᴅ ʟɪɴᴋ ᴏʀ Exᴘɪʀᴇᴅ ʟɪɴᴋ !</b>",
                 protect_content=True
             )
     if data.startswith("sendfiles"):
