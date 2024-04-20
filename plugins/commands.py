@@ -377,8 +377,9 @@ async def start(client, message):
             )
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
+            if fileid == "all":
             btn = [[
-                InlineKeyboardButton("Gᴇᴛ Fɪʟᴇ", url=f"https://telegram.me/")
+                InlineKeyboardButton("Gᴇᴛ Fɪʟᴇ", url=f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}")
             ]]
             await message.reply_photo(
                 photo = VRFIED_IMG,
@@ -388,7 +389,7 @@ async def start(client, message):
             )
             return
             btn = [[
-                InlineKeyboardButton("Get File", url="https://telegram.me/")
+                InlineKeyboardButton("Get File", url=f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}")
             ]]
             await message.reply_photo(
                 photo = VRFIED_IMG,
