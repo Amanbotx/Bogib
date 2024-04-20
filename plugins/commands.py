@@ -377,13 +377,14 @@ async def start(client, message):
             )
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
-                btn = [[
-                    InlineKeyboardButton("Gᴇᴛ Fɪʟᴇ", url=f"https://telegram.me/")
-                ]]
+            btn = [[
+                InlineKeyboardButton("Gᴇᴛ Fɪʟᴇ", url=f"https://telegram.me/")
+            ]]
             await message.reply_photo(
                 photo = VRFIED_IMG,
                 caption = script.VERIFED_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-                # protect_content=True
+                protect_content=True,
+                reply_markup=InlineKeyboardMarkup(btn)
             )
             return
             btn = [[
