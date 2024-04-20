@@ -24,8 +24,8 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "6883904115:AAFzjOFjf30iab7YEh5dMQ5Y1D0V-6b
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
-VRFIED_IMG = environ.get("VRFIED_IMG", "https://graph.org/file/9cea98695ef1343e4f627.jpg")
-VRFY_IMG = environ.get("VRFY_IMG", "https://graph.org/file/10f9dac6eab3247e35831.jpg")
+VRFIED_IMG = environ.get("VRFIED_IMG", "https://graph.org/file/6fc7e9a968eba4e003a0c.jpg")
+VRFY_IMG = environ.get("VRFY_IMG", "https://telegra.ph/file/9cc07f9b1e20ae1423c32.jpg")
 PICS = (environ.get('PICS', 'https://graph.org/file/114f17a30689503666e5f.jpg https://graph.org/file/11a77cf33bd43cd2637d7.jpg https://graph.org/file/0e20c90db5e66b9f3b148.jpg https://graph.org/file/0699652395e338ed6c0d6.jpg https://graph.org/file/d2c44919540b70c43481f.jpg https://graph.org/file/04c116b75c9236f47c75a.jpg https://graph.org/file/b149f5bb2f8ca573f1b07.jpg https://graph.org/file/a8966f308b24fe27c34b2.jpg https://graph.org/file/816ac90ab2843e6db3508.jpg https://graph.org/file/36eeeec7b09877a4a077e.jpg https://graph.org/file/55c9550ffcab621cb421b.jpg')).split() #SAMPLE PIC
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/2b8fc915eb967c35fa98d.mp4")
