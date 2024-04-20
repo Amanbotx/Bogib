@@ -24,15 +24,17 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "6883904115:AAFzjOFjf30iab7YEh5dMQ5Y1D0V-6b
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/65fe86fc02a73f6fcf0ce.jpg https://telegra.ph/file/6fa70325813885809a64a.jpg https://telegra.ph/file/e06afc1e7abbcd8d4213a.jpg https://telegra.ph/file/3f4040b320d9b7840200a.jpg https://telegra.ph/file/3950fad740fb8ea894df7.jpg')).split() #SAMPLE PIC
-NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/85d361ab4cb6511006022.mp4")
-SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/86b7b7e2aa7e38f328902.jpg")
-SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/734170f40b8169830d821.jpg'))
-CODE = (environ.get('CODE', 'https://telegra.ph/file/72f425007b22d28bd935e.jpg'))
 VRFIED_IMG = environ.get("VRFIED_IMG", "https://graph.org/file/9cea98695ef1343e4f627.jpg")
 VRFY_IMG = environ.get("VRFY_IMG", "https://graph.org/file/10f9dac6eab3247e35831.jpg")
-
+PICS = (environ.get('PICS', 'https://graph.org/file/114f17a30689503666e5f.jpg https://graph.org/file/11a77cf33bd43cd2637d7.jpg https://graph.org/file/0e20c90db5e66b9f3b148.jpg https://graph.org/file/0699652395e338ed6c0d6.jpg https://graph.org/file/d2c44919540b70c43481f.jpg https://graph.org/file/04c116b75c9236f47c75a.jpg https://graph.org/file/b149f5bb2f8ca573f1b07.jpg https://graph.org/file/a8966f308b24fe27c34b2.jpg https://graph.org/file/816ac90ab2843e6db3508.jpg https://graph.org/file/36eeeec7b09877a4a077e.jpg https://graph.org/file/55c9550ffcab621cb421b.jpg')).split() #SAMPLE PIC
+NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/2b8fc915eb967c35fa98d.mp4")
+SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/86b7b7e2aa7e38f328902.jpg")
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/734170f40b8169830d821.jpg'))
+REFER = (environ.get('REFER', 'https://telegra.ph/file/b2ab60c80ff67f6af0f6e.jpg'))
+CODE = (environ.get('CODE', 'https://telegra.ph/file/72f425007b22d28bd935e.jpg'))
+PICSS = (environ.get('PICSS', 'https://telegra.ph/file/b2ab60c80ff67f6af0f6e.jpg'))
+#stream link shortner
 # Admins, Channels & Users
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002062708890'))
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5977931010').split()]
