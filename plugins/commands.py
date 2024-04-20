@@ -378,14 +378,14 @@ async def start(client, message):
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
             if fileid == "all":
-            btn = [[
+                btn = [[
                 InlineKeyboardButton("Gᴇᴛ Fɪʟᴇ", url=f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}")
             ]]
-            await message.reply_photo(
-                photo = VRFIED_IMG,
-                caption = script.VERIFED_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-                protect_content=True,
-                reply_markup=InlineKeyboardMarkup(btn)
+                await message.reply_photo(
+                    photo = VRFIED_IMG,
+                    caption = script.VERIFED_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                    protect_content=True,
+                    reply_markup=InlineKeyboardMarkup(btn)
             )
             return
             btn = [[
