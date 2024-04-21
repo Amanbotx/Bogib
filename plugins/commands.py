@@ -1,9 +1,3 @@
-# Don't Remove Credit @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
-# premium code is implemented by - @VJBots
-# referal code credit - @VJBots
 
 import os
 import string
@@ -271,7 +265,7 @@ async def start(client, message):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-            return 
+        return 
     try:
         pre, file_id = data.split('_', 1)
     except:
