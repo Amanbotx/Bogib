@@ -1907,7 +1907,79 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "premium_info":
+        buttons = [[
+         InlineKeyboardButton('ᴄʟɪᴄᴋ ᴛᴏ ʜᴇʀᴇ', callback_data='aman')
+        ],[            
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
+        ]]
+        
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.PLAN_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+    )
+
+    elif query.data == "aman":
+        
+        buttons = [[
+            InlineKeyboardButton('⚜️ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ꜰʀᴇᴇ ᴛʀɪᴀʟ', callback_data="give_trial")
+        ],[
+            InlineKeyboardButton('🌟 1𝖶𝖾𝖾𝗄 : ₹10 🌟', url="https://bit.ly/10-Aman"),
+            InlineKeyboardButton('🌟 1𝖬𝗈𝗇𝗍𝗁 : ₹30 🌟', url="https://bit.ly/30-Aman")
+        ],[
+            InlineKeyboardButton('🌟 2𝖬𝗈𝗇𝗍𝗁 : ₹60 🌟', url="https://bit.ly/60-Aman"),
+            InlineKeyboardButton('🌟 3𝖬𝗈𝗇𝗍𝗁 : ₹120 🌟', url="https://bit.ly/120-Aman")
+        ],[
+            InlineKeyboardButton('🌟 6𝖬𝗈𝗇𝗍𝗁 : ₹199 🌟', url="https://bit.ly/199-Aman"),
+            InlineKeyboardButton('🌟 1𝖸𝖾𝖺𝗋 : ₹389 🌟', url="https://bit.ly/389-Aman")
+        ],[
+            InlineKeyboardButton('🎀 𝖢𝗎𝗌𝗍𝗈𝗆 𝖯𝗅𝖺𝗇 🎀', callback_data='other')
+        ],[            
+            InlineKeyboardButton('📸 sᴇɴᴅ sᴄʀᴇᴇɴsʜᴏᴛ 📸', url="http://t.me/AV_OWNER_BOT")
+        ],[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='premium_info')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.AMANJI_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+
+    elif query.data == "other":
+        buttons = [[
+            InlineKeyboardButton('☎️ ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ', user_id=int(5977931010))
+        ],[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='aman')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.OTHER_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     
+  
+    elif query.data == "channels":
+        buttons = [[
+            InlineKeyboardButton('𝑺𝒖𝒃𝒔𝒄𝒓𝒊𝒃𝒆 𝒎𝒚 𝒀𝑻 𝒄𝒉𝒂𝒏𝒏𝒆𝒍', url='https://youtube.com/@ytdautobotz')
+        ],[
+            InlineKeyboardButton('𝑮𝒓𝒐𝒖𝒑', url='https://t.me/+X3uoMkIHhco1YTY1'),
+            InlineKeyboardButton('𝑪𝒉𝒂𝒏𝒏𝒆𝒍', url='https://t.me/AV_UPLOAD_MOVIES')
+        ],[
+            InlineKeyboardButton('𝑺𝒖𝒑𝒑𝒐𝒓𝒕', url='https://t.me/+cZGisR7lHeg1ZDdl'),
+            InlineKeyboardButton('𝑼𝒑𝒅𝒂𝒕𝒆', url='https://t.me/AV_MOVIE_HOUSE')
+        ],[
+            InlineKeyboardButton('⇇ ʙᴀᴄᴋ', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.CHANNELS.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+    )
     elif query.data == "help":
         buttons = [[
              InlineKeyboardButton('⚙️ ᴀᴅᴍɪɴ ᴏɴʟʏ 🔧', callback_data='admin'),
