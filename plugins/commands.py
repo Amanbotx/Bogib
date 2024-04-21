@@ -8,6 +8,7 @@ import asyncio
 import time
 import datetime
 from Script import script
+from datetime import datetime
 from pyrogram import Client, filters, enums
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import *
@@ -24,7 +25,10 @@ from urllib.parse import quote_plus
 from TechVJ.util.file_properties import get_name, get_hash, get_media_file_size
 logger = logging.getLogger(__name__)
 
+
+TIMEZONE = "Asia/Kolkata"
 BATCH_FILES = {}
+
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
